@@ -1,0 +1,29 @@
+{
+  "name": "card-with-material-ui-wip",
+  "version": "1.0.0",
+  "description": "A sample card created with Material UI. TODO: adjust grid system.",
+  "keywords": [
+    "material-ui",
+    "react"
+  ],
+  "main": "src/index.js",
+  "dependencies": {
+    "@material-ui/core": "3.3.1",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "react-scripts": "2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
