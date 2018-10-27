@@ -13,6 +13,7 @@ import {
 const styles = theme => ({
   card: {
     display: "block",
+    margin: 5,
     [theme.breakpoints.up("sm")]: {
       display: "flex"
     }
