@@ -18,17 +18,27 @@ const styles = theme => ({
     }
   },
 
+  caption: {
+    textTransform: "uppercase"
+  },
+
+  title: {
+    textTransform: "uppercase"
+  },
+
   media: {
     width: "auto",
     height: 300,
     [theme.breakpoints.up("sm")]: {
       width: 1500
-    }
+    },
+    flexBasis: "50%"
   },
 
   content: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    flexBasis: "50%"
   },
 
   cardText: {
@@ -42,30 +52,28 @@ const styles = theme => ({
 
 class CardComponent extends Component {
   render() {
-    const { classes, imageUrl, title } = this.props;
+    const { classes, imageUrl, title, caption, text, actionLink } = this.props;
 
     return (
       <Card className={classes.card}>
         <CardMedia image={imageUrl} title="Flower" className={classes.media} />
-
         <CardContent className={classes.content}>
           <div className={classes.cardText}>
-            <Typography variant="caption" gutterBottom>
-              SUSTENTABILIDADE
+            <Typography
+              variant="caption"
+              className={classes.caption}
+              gutterBottom
+            >
+              {caption}
             </Typography>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" className={classes.title} gutterBottom>
               {title}
             </Typography>
-            <Typography variant="body1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              saepe architecto maxime dolores accusantium harum itaque delectus
-              iste error velit dolor, corporis officia sed? Debitis modi
-              explicabo excepturi repudiandae sequi!
-            </Typography>
+            <Typography variant="body1">{text}</Typography>
           </div>
           <CardActions style={{ padding: 0 }}>
             <Typography variant="body1">
-              <a href="#">Leia mais</a>
+              <a href={actionLink}>Read more</a>
             </Typography>
           </CardActions>
         </CardContent>
