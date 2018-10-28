@@ -25,7 +25,6 @@ function App() {
           title="Title 2"
           text={card2Text}
           actionLink="http://google.com/"
-          reverse
         />
       </Grid>
     </Grid>
