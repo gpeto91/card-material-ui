@@ -41,7 +41,8 @@ const styles = theme => ({
   content: {
     display: "flex",
     flexDirection: "column",
-    flexBasis: "50%"
+    flexBasis: "50%",
+    backgroundColor: "#eee"
   },
 
   cardText: {
