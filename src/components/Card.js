@@ -15,7 +15,8 @@ const styles = theme => ({
     margin: 5,
     [theme.breakpoints.up("sm")]: {
       display: "flex"
-    }
+    },
+    borderRadius: 0
   },
 
   caption: {
@@ -23,7 +24,9 @@ const styles = theme => ({
   },
 
   title: {
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    color: theme.palette.primary.main,
+    fontWeight: "bold"
   },
 
   media: {
@@ -47,6 +50,13 @@ const styles = theme => ({
     [theme.breakpoints.up("sm")]: {
       marginBottom: 0
     }
+  },
+
+  linkAction: {
+    textDecoration: "none",
+    textTransform: "uppercase",
+    color: theme.palette.primary.main,
+    fontWeight: "bold"
   }
 });
 
@@ -73,7 +83,9 @@ class CardComponent extends Component {
           </div>
           <CardActions style={{ padding: 0 }}>
             <Typography variant="body1">
-              <a href={actionLink}>Read more</a>
+              <a href={actionLink} className={classes.linkAction}>
+                Read more
+              </a>
             </Typography>
           </CardActions>
         </CardContent>
